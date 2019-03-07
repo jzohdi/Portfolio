@@ -208,3 +208,32 @@ emailButton.addEventListener("click", function() {
 window.addEventListener("resize", function() {
   location.reload();
 });
+// $("#nav-about").click(function() {
+//   console.log("here");
+//   $("html,body").animate(
+//     {
+//       scrollTop: $(".second-page-section").offset().top
+//     },
+//     "slow"
+//   );
+// });
+const sections = [
+  ".second-page-section",
+  ".third-page-section",
+  ".fourth-page-section"
+];
+const navButtons = ["nav-about", "nav-projects", "nav-contact"];
+navButtons.forEach(function(element, index) {
+  document.getElementById(element).addEventListener("click", function() {
+    scrollTo(sections[index]);
+  });
+});
+const scrollTo = function(section) {
+  console.log(section);
+  $("html,body").animate(
+    {
+      scrollTop: $(section).offset().top
+    },
+    "slow"
+  );
+};
