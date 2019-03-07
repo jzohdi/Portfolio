@@ -159,6 +159,12 @@ const Utils = new Utility();
 const mobileTablet = mobileAndTabletcheck();
 const padding = mobileTablet ? 400 : 0;
 window.addEventListener("scroll", function() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+
   // console.log("scrolling");
   const langSection = $("#languages-section");
   const isLangInView = Utils.isElementInView(
@@ -236,4 +242,7 @@ const scrollTo = function(section) {
     },
     "slow"
   );
+};
+const topFunction = function() {
+  scrollTo("#main-body");
 };
