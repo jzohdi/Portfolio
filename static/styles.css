@@ -128,7 +128,8 @@ div.row[class^="row-margin-right"] {
   }
 }
 .second-page-section {
-  background-color: white;
+  /* background-color: white; */
+  background-color: rgba(255, 119, 134, 1);
   min-height: 100vh;
   padding-bottom: 50px;
 }
@@ -253,14 +254,17 @@ div.row[class^="row-margin-right"] {
 }
 .projects-title {
   color: white;
-  font-size: 30px;
+  /* color: black; */
+  background-color: black;
+  font-size: 40px;
   text-align: center;
   font-weight: bolder;
   padding-top: 30px;
   padding-bottom: 30px;
 }
 .projects-block-desc {
-  color: white;
+  /* color: white; */
+  color: black;
   font-size: 12px;
   padding-top: 5%;
   padding-bottom: 5%;
@@ -281,14 +285,15 @@ div.row[class^="row-margin-right"] {
   text-decoration: none;
 }
 .projects-block-desc a {
-  color: white;
+  color: black;
 }
 .projects-block-desc a:hover {
   color: darkblue;
 }
 .third-page-section {
-  margin-top: 100px;
-  background-image: linear-gradient(black, rgb(90, 0, 210));
+  /* margin-top: 50px; */
+  /* background-image: linear-gradient(black, rgb(90, 0, 210)); */
+  background-color: white;
 }
 .logo-style {
   width: 100%;
