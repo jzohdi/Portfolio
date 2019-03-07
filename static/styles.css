@@ -262,9 +262,19 @@ div.row[class^="row-margin-right"] {
 .projects-block-desc {
   color: white;
   font-size: 12px;
-  padding-left: 10% !important;
-  padding-right: 10% !important;
   padding-top: 5%;
+  padding-bottom: 5%;
+  /* padding-right: 10% !important; */
+}
+@media (max-width: 767px) {
+  .projects-block-desc {
+    padding-top: 5%;
+  }
+}
+@media (min-width: 1000px) {
+  .projects-block-desc {
+    padding-top: 5%;
+  }
 }
 .projects-block-desc a,
 .projects-block-desc a:hover {
