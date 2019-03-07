@@ -143,6 +143,17 @@ window.addEventListener("scroll", function() {
   const isLangInView = Utils.isElementInView(langSection, true);
   if (isLangInView) {
     langSection.removeClass("my-hide").addClass("fade-in-right");
+    [
+      "python-bar",
+      "javascript-bar",
+      "sql-bar",
+      "java-bar",
+      "c-bar",
+      "react-bar"
+    ].forEach(element => {
+      $("#" + element).addClass(element);
+    });
+    // $("#python-bar").addClass("python-bar");
   }
 
   const aboutSection = $("#about-section");

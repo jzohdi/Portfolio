@@ -198,6 +198,48 @@ div.row[class^="row-margin-right"] {
     font-size: 14px;
   }
 }
+.python-bar {
+  -webkit-animation-name: python-bar;
+  -moz-animation-name: python-bar;
+  -ms-animation-name: python-bar;
+  -o-animation-name: python-bar;
+  animation-name: python-bar;
+}
+.javascript-bar {
+  -webkit-animation-name: javascript-bar;
+  -moz-animation-name: javascript-bar;
+  -ms-animation-name: javascript-bar;
+  -o-animation-name: javascript-bar;
+  animation-name: javascript-bar;
+}
+.sql-bar {
+  -webkit-animation-name: sql-bar;
+  -moz-animation-name: sql-bar;
+  -ms-animation-name: sql-bar;
+  -o-animation-name: sql-bar;
+  animation-name: sql-bar;
+}
+.java-bar {
+  -webkit-animation-name: java-bar;
+  -moz-animation-name: java-bar;
+  -ms-animation-name: java-bar;
+  -o-animation-name: java-bar;
+  animation-name: java-bar;
+}
+.c-bar {
+  -webkit-animation-name: c-bar;
+  -moz-animation-name: c-bar;
+  -ms-animation-name: c-bar;
+  -o-animation-name: c-bar;
+  animation-name: c-bar;
+}
+.react-bar {
+  -webkit-animation-name: react-bar;
+  -moz-animation-name: react-bar;
+  -ms-animation-name: react-bar;
+  -o-animation-name: react-bar;
+  animation-name: react-bar;
+}
 #python-skill,
 #javascript-skill,
 #sql-skill,
@@ -224,24 +266,275 @@ div.row[class^="row-margin-right"] {
 #java-bar,
 #c-bar,
 #react-bar {
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  -ms-animation-duration: 3s;
+  animation-duration: 3s;
   border-radius: 5px;
   height: 10px;
   background-color: black;
 }
+@keyframes python-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-webkit-keyframes python-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-moz-keyframes python-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-ms-keyframes python-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-o-keyframes python-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
 #python-bar {
   width: 70%;
+}
+
+@keyframes javascript-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 65%;
+  }
+}
+@-webkit-keyframes javascript-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 65%;
+  }
+}
+@-moz-keyframes javascript-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 65%;
+  }
+}
+@-ms-keyframes javascript-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 65%;
+  }
+}
+
+@-o-keyframes javascript-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 65%;
+  }
 }
 #javascript-bar {
   width: 65%;
 }
+@keyframes sql-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@-webkit-keyframes sql-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@-moz-keyframes sql-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@-ms-keyframes sql-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@-o-keyframes sql-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 50%;
+  }
+}
 #sql-bar {
   width: 50%;
 }
+@keyframes java-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@-webkit-keyframes java-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@-moz-keyframes java-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@-ms-keyframes java-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
+
+@-o-keyframes java-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
 #java-bar {
-  width: 40%;
+  width: 30%;
+}
+@keyframes c-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+@-webkit-keyframes c-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 20%;
+  }
+}
+@-moz-keyframes c-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 20%;
+  }
+}
+@-ms-keyframes c-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+@-o-keyframes c-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 20%;
+  }
 }
 #c-bar {
   width: 20%;
+}
+@keyframes react-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 10%;
+  }
+}
+@-webkit-keyframes react-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 10%;
+  }
+}
+@-moz-keyframes react-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 10%;
+  }
+}
+@-ms-keyframes react-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 10%;
+  }
+}
+@-o-keyframes react-bar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 10%;
+  }
 }
 #react-bar {
   width: 10%;
@@ -385,6 +678,7 @@ div.row[class^="row-margin-right"] {
 .my-hide {
   opacity: 0;
 }
+
 @-webkit-keyframes fade-in-left {
   0% {
     opacity: 0;
