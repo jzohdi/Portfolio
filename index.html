@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/styles.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <!-- JQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <!-- local JQuery backup -->
+    <script>
+      window.jQuery ||
+        document.write('<script src="/static/jquery-3.3.1.min.js"><\/script>');
+    </script>
+    <!-- Latest compiled and minified JavaScript bootstrap CDN -->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Latest compiled and minified plotly.js JavaScript -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- OR use a specific plotly.js release (e.g. version 1.5.0) -->
+    <script src="https://cdn.plot.ly/plotly-1.5.0.min.js"></script>
+
+    <!-- OR an un-minified version is also available -->
+    <!-- <script src="https://cdn.plot.ly/plotly-latest.js" charset="utf-8"></script> -->
+    <title>JakeZohdi</title>
+    <style id="addStyles" type="text/css"></style>
+  </head>
+  <body id="main-body">
+    <div id="bootstrapCssTest" class="hidden"></div>
+    <div id="starter-animation" style="width: 100vw"></div>
+    <div class="container-fullwidth">
+      <canvas id="map-canvas"></canvas>
+      <div id="content" class="container-fullwidth first-page">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-header">
+              <button
+                aria-expanded="false"
+                class="navbar-toggle collapsed"
+                data-target="#navbar"
+                data-toggle="collapse"
+                type="button"
+              >
+                <span
+                  class="glyphicon-animate glyphicon glyphicon-menu-down"
+                  aria-hidden="true"
+                ></span>
+              </button>
+            </div>
+            <div class="nav-center collapse navbar-collapse" id="navbar">
+              <ul class=" fade-in-text2 nav navbar-nav nav-center">
+                <li>
+                  <a
+                    style="margin-right: 20px;z-index:1;"
+                    class="nav-titles"
+                    href="#"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a style="z-index: 1" class="nav-titles" href="#">Projects</a>
+                </li>
+                <li>
+                  <a class="nav-titles right-nav-titles" href="#">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="row-margin-right row fade-in-text normalize-height">
+          <div class="col-md-offset-3 col-md-6 hello-name">
+            <p style="z-index: 1">
+              Jacob Zohdi<br />
+              - Aspiring Developer -<br />
+              <span id="contact-small"
+                >Columbia, MD<br />
+                443-604-6791<br />
+                jzohdi@terpmail.umd.edu</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="second-page-section">
+        <div class="row">
+          <div id='about-section' class="col-xs-12 col-sm-6">
+            <div class="section-margin">
+              <h4 class="title section-title">About</h4>
+              <hr style="width:50%" class="title-line" />
+              <p>
+                <span class="about-section-title"> Prefix</span><br />After
+                completing my degree in General Biology, I continued to pursue
+                further experience in the medical field and biological research
+                with bench top lab work. A background in biology cultivated many
+                skills including how to combine detail oriented methodology,
+                with creative horizontal thinking.
+              </p>
+              <p>
+                <br /><span class="about-section-title"> Today </span
+                ><br />Everything changed with my first "Hello World!" program,
+                and now I apply my previous training to my new passion for
+                Computer Science. <br />My top interests include Machine Machine
+                learning and improving algorithm efficiency. My first course in
+                AI through ColumbiaX provided with a strong foundation in ML
+                topics from game theory and state search, to solving problems
+                such as Constraint Satisfcation( CSP ). Using Python I wrote
+                code to develop a 2048 playing program, and a sudoka CSP
+                alogorithm.<br />
+                In improving efficiency I always find myself refactoring my
+                earlier projects /*TODO write more comments*/ , for readability and
+                speed.<br />
+                Looking at early code also reminds me of how much I've improved
+                as trying to catch up in a field that constantly moves forward
+                can sometimes feel like a daunting task.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div id='languages-section' class="section-margin">
+              <h4 class="title section-title">Language Usage</h4>
+              <hr style="width:50%" class="title-line" />
+              <label class="language-title" for="python-skill">Python</label>
+              <div id="python-skill"><div id="python-bar"></div></div>
+              <label class="language-title" for="javascript-skill"
+                >Javascript</label
+              >
+              <div id="javascript-skill"><div id="javascript-bar"></div></div>
+              <label class="language-title" for="sql-skill"
+                >SQL & PostgresQL</label
+              >
+              <div id="sql-skill"><div id="sql-bar"></div></div>
+              <label class="language-title" for="java-skill">Java</label>
+              <div id="java-skill"><div id="java-bar"></div></div>
+              <label class="language-title" for="c-skill">C</label>
+              <div id="c-skill"><div id="c-bar"></div></div>
+              <label class="language-title" for="react-skill">React</label>
+              <div id="react-skill"><div id="react-bar"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div id='education-section' class="col-sm-8 col-sm-offset-2">
+            <div class="section-margin">
+              <h4 class="title section-title">Education</h4>
+              <hr style="width:50%" class="title-line" />
+              <div class="university-title">
+                <span class="uni-name"
+                  >University of Maryland, Computer Science</span
+                ><span class="uni-detail"><i>College Park</i></span>
+              </div>
+              <div><i>Sep 2018 - May 2021 (expected)</i></div>
+              <div><i>Major GPA - 4.0</i></div>
+              <ul><li>Favorite Topics: Data Structures, Game Theory</li></ul>
+            
+            <div style='margin-top: 20px;'class="university-title">
+                <span class="uni-name"
+                  >University of Maryland, Biological Sciences</span
+                ><span class="uni-detail"><i>College Park</i></span>
+              </div>
+              <div><i>Sep 2012 - May 2016</i></div>
+              <div><i>GPA - 4.0</i></div>
+              <ul><li>UMD Club Boxing 2014</li><li>American Medical Student Association 2013</li></ul>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class='third-page-section'>
+          <div class="projects-title">Projects</div>
+          <div class="row">
+            <div class="projects-block col-sm-6"><a href="https://ourfreetime.herokuapp.com/"><img class='portfolio-image'src="static/ourfreetime.png" alt="Our Free Time"></a></div>
+            <div class="col-sm-6 projects-block-desc"><p>Our Free Time</p>
+              <p>- Create an account, and check off what times of the day you're busy. Add friends by username and see what time slots of the day,
+               you both have free time. Find the people you know with the same gaps in the day to get lunch or to hang out.</p>
+              <p>Python( Flask ), PostgresQL, Javascript, JQuery, Bootstrap</p>
+              <a href="https://github.com/jzohdi/FindOurTime">Repository</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="projects-block-desc col-sm-6">
+              <p>Tweet Quotes</p>
+              <p>- Cycle through quotes on desgin through ajax get and connect to twitter with filled in input using Twitter API. Compiled JSON data of quotes and 
+                authors through webscraping in Python( BeautifulSoup4 ). - In progress: create own JSON API in Flask.</p>
+              <p>JSON data, BS4 (Python ) webscraping, Javascript, </p>
+              <a href="https://github.com/jzohdi/Canvas-Quotes">Repository</a>
+            </div>
+            <div class="col-sm-6 projects-block"><a href="https://jzohdi.github.io/Canvas-Quotes/"><img class='portfolio-image' src="static/tweetquotes.png" alt="Tweet Quotes"></a></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 projects-block"><a href="https://jzohdi.github.io/simple_graph/"><img class='portfolio-image'src="static/simplegraph.png" alt="Simple Graph"></a></div>
+            <div class="projects-block-desc col-sm-6"><p>Simple Graph</p>
+              <p> - Graph polynomial, trig, log and more with a simple graphing tool. Graph multiple functions on the same box. Uses url encoding for 
+                link sharing support. Detects x position of mouse and shows tangent line of point on each function, while displaying derivative and tanget 
+                line functions above.</p>
+                <p>Javascript, JQuery, HTML5 Canvas</p>
+                <a href="https://github.com/jzohdi/simple_graph">Repository</a></div>
+          </div>
+          <div class="row">
+              <div class="col-sm-6 projects-block-desc"><p>Tunnel Game</p>
+                <p>Pure Canvas animation, use mouse or touch screen to keep player in the middle of the tunnel. 
+                  As a wall enters the screen from top, creates new wall just above. After leaving bottom, deletes self from array of wall objects.
+                  Keeps array size to the minimal length for game, keeping animation smooth.
+                </p>
+                <p>Javascript, JQuery, HTML5 Canvas</p>
+                  <a href="https://github.com/jzohdi/tunnel_game">Repository</a></div>
+            <div class="col-sm-6 projects-block"><a href="https://jzohdi.github.io/tunnel_game/"><img class='portfolio-image'src="static/tunnelgame.png" alt="Tunnel Game"></a></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 projects-block"><a href="#"><img class='portfolio-image' src="static/tacolindocatering.png" alt="Taco Lindo Catering"></a></div>
+            <div class="col-sm-6 projects-block-desc">
+              <p>Taco Lindo Catering ( In progress )</p>
+              <p>Responsive, Fluid, Simple design to handle catering support for Taco Lindo, a New Jersey based restaraunt. Features include: dynamic menu dependent on admin changes. secure payment.
+                 Date validation and sorting. User changes to orders. log in, registration, and guest checkout.   
+              </p>
+              <p>Python( Flask ), PostgresQL, Javascript, Bootstrap, Jquery, Stripe.js, Workbook( Excel ) </p>
+              <a href="https://github.com/jzohdi/TLindo">Repository</a></div>
+            </div>
+          </div>
+            <div class="row">
+            <div class="col-sm-6 projects-block-desc">
+              <p>SVM Visualizer ( In progress )</p>
+              <p>Making svm kernels with visualizations quickly accessible. Input own user data in the form of 2D or 3D data to return prediction map of data space. Eventually compatable with larger dimension space with heat map distribution based on certainty of classification. </p>
+              <p>Python( Flask, sklearn ), Javascript, Plotly.js</p>
+              <a href="https://github.com/jzohdi/svmVisualizer">Repository</a></div>
+            </div>
+            <div class="col-sm-6 projects-block"><a href="#"><img src="static/svmvisualizer.png" alt="SVM Visualizer" class="portfolio-image"></a></div>
+          </div>
+          </div>
+          <div class='fourth-page row'>
+
+          </div>
+        </div>
+      </div>
+      <!-- <div class="third-page-section"></div> -->
+    </div>
+    <footer></footer>
+    <!-- Bootstrap JS local fallback -->
+    <script>
+      if (typeof $.fn.modal === "undefined") {
+        document.write(
+          '<script src="static/bootstrap-3.3.7-dist/js/bootstrap.min.js"><\/script>'
+        );
+      }
+    </script>
+    <script>
+      // bootstrap css fallback if cdn fail
+      $(function() {
+        if ($("#bootstrapCssTest").is(":visible")) {
+          $("head").prepend(
+            '<link rel = "styleshee" href = "static/bootstrap-3.3.7-dist/css/bootstrap.min.css" type="text/css">'
+          );
+          $("head").prepend(
+            '<link rel = "stylesheet" href = "static/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" type="text/css">'
+          );
+        }
+      });
+    </script>
+  </body>
+  <script>
+    $(".navbar-toggle").click(function() {
+      $('.glyphicon').toggleClass("rotate");
+    });
+  </script>
+  <script src="static/scripts.js"></script>
+</html>
