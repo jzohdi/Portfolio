@@ -229,7 +229,7 @@ navButtons.forEach(function(element, index) {
   });
 });
 const scrollTo = function(section) {
-  console.log(section);
+  $("#toggle-nav-button").click();
   $("html,body").animate(
     {
       scrollTop: $(section).offset().top
