@@ -214,9 +214,9 @@ emailButton.addEventListener("click", function() {
   window.open(String("mailto:jzohdi^terpmail.umd.edu").replace("^", "@"));
 });
 
-window.addEventListener("resize", function() {
-  location.reload();
-});
+// window.addEventListener("resize", function() {
+//   location.reload();
+// });
 // $("#nav-about").click(function() {
 //   console.log("here");
 //   $("html,body").animate(
