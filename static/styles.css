@@ -77,6 +77,9 @@ div.row[class^="row-margin-right"] {
     font-size: 25px;
   }
 }
+.glyphicon-menu-down {
+  color: rgba(255, 119, 134, 1);
+}
 .glyphicon-animate {
   -moz-transition: transform 0.25s linear;
   -webkit-transition: transform 0.25s linear;
@@ -563,6 +566,7 @@ div.row[class^="row-margin-right"] {
   padding: 0px 0px !important;
 }
 .projects-block:hover {
+  z-index: 2;
   transform: scale(1.05);
 }
 .projects-title {
@@ -784,4 +788,22 @@ div.row[class^="row-margin-right"] {
 
 #myBtn:hover {
   background-color: black;
+}
+.portrait-image-container {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  text-align: center;
+}
+.portrait-image {
+  border-radius: 10%;
+  /* height: calc(150px + 8vw); */
+  width: calc(150px + 8vw);
+}
+.portrait-row {
+  background-color: white;
+  color: black;
+}
+.portrait-row div {
+  color: black;
+  padding-top: calc(30px + 5%);
 }
