@@ -2,7 +2,7 @@
 html,
 body {
   /* background-color: #0a68ff; */
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif !important;
 }
 .row {
   margin-left: 0px !important;
