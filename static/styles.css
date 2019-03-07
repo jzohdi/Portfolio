@@ -737,3 +737,31 @@ div.row[class^="row-margin-right"] {
   -o-animation-name: fade-in-left;
   animation-name: fade-in-left;
 }
+.fourth-page-section {
+  padding-top: 25vh;
+  min-height: 100vh;
+  background-color: white;
+}
+#email-button {
+  transition: color 1s, background-color 1s;
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-size: calc(12px + 1.5vw);
+  border: 2px solid black;
+  padding: 10px 10px;
+  z-index: 1;
+}
+
+#email-button:hover {
+  color: white;
+  background-color: black;
+}
+.glyphicon-envelope {
+  margin-left: 25px;
+}
+.links-style {
+  text-align: center;
+  margin-top: 10vh;
+  font-size: calc(10px + 1.1vw);
+}
