@@ -768,9 +768,9 @@ div.row[class^="row-margin-right"] {
 #myBtn {
   display: none;
   position: fixed;
-  bottom: 20px;
-  right: 30px;
-  transition: background-color 1s;
+  bottom: 2vw;
+  right: 2vw;
+  transition: background-color 1s, display 0.3s;
   z-index: 99;
   font-size: 20px;
   border: none;

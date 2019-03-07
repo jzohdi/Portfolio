@@ -161,6 +161,9 @@ const padding = mobileTablet ? 400 : 0;
 window.addEventListener("scroll", function() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("myBtn").style.display = "block";
+    setTimeout(function() {
+      document.getElementById("myBtn").style.display = "none";
+    }, 2000);
   } else {
     document.getElementById("myBtn").style.display = "none";
   }
