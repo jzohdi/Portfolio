@@ -154,16 +154,24 @@ Utility.prototype = {
     }
   }
 };
-
+window.initialScroll;
 const Utils = new Utility();
 const mobileTablet = mobileAndTabletcheck();
 const padding = mobileTablet ? 400 : 0;
+var lastRun = null;
+
+function oneIn2Min() {
+  if (lastRun == null || new Date().getTime() - lastRun > 3000) {
+    document.getElementById("myBtn").style.display = "none";
+  }
+  lastRun = new Date().getTime();
+}
+
 window.addEventListener("scroll", function() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("myBtn").style.display = "block";
-    setTimeout(function() {
-      document.getElementById("myBtn").style.display = "none";
-    }, 2000);
+
+    setTimeout(oneIn2Min, 3000);
   } else {
     document.getElementById("myBtn").style.display = "none";
   }
