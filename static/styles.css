@@ -747,6 +747,7 @@ div.row[class^="row-margin-right"] {
   background-color: white;
 }
 #email-button {
+  cursor: pointer;
   transition: color 1s, background-color 1s;
   background-color: white;
   color: black;
