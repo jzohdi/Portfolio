@@ -599,7 +599,7 @@ div.row[class^="row-margin-right"] {
 }
 .project-title {
   text-align: center;
-  border-bottom: 1px solid;
+  border-bottom: 2px solid;
   width: 50%;
 }
 .projects-block-desc a,
@@ -806,4 +806,11 @@ div.row[class^="row-margin-right"] {
 .portrait-row div {
   color: black;
   padding-top: calc(30px + 5%);
+}
+.repo-div {
+  margin-top: 25px;
+}
+.repo-div a {
+  border: 2px solid black;
+  padding: 5px 5px;
 }
