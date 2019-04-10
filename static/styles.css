@@ -613,7 +613,7 @@ div.row[class^="row-margin-right"] {
 .project-title {
   text-align: center;
   border-bottom: 2px solid;
-  width: 50%;
+  width: 100%;
 }
 .projects-block-desc a,
 .projects-block-desc a:hover {
@@ -823,6 +823,7 @@ div.row[class^="row-margin-right"] {
 }
 .repo-div {
   margin-top: 25px;
+  text-align: center;
 }
 .repo-div a {
   border: 2px solid black;
