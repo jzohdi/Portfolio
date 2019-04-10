@@ -231,6 +231,7 @@ const navButtons = ["nav-about", "nav-projects", "nav-contact"];
 navButtons.forEach(function(element, index) {
   document.getElementById(element).addEventListener("click", function() {
     scrollTo(sections[index]);
+    $("#toggle-nav-button").click();
   });
 });
 const scrollTo = function(section) {
@@ -242,6 +243,7 @@ const scrollTo = function(section) {
     "slow"
   );
 };
+
 const topFunction = function() {
   scrollTo("#main-body");
 };

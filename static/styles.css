@@ -1,3 +1,6 @@
+hr {
+  margin-top: 0px;
+}
 /* styles for the top page / navbar */
 html,
 body {
@@ -182,6 +185,7 @@ div.row[class^="row-margin-right"] {
 }
 .title-line {
   border: 2px solid black;
+  margin-top: 0px;
 }
 .small-section-spacing {
   padding-top: 10px;
