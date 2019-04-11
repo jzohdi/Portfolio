@@ -180,7 +180,7 @@ window.addEventListener("scroll", function() {
   const langSection = $("#languages-section");
   const isLangInView = Utils.isElementInView(
     langSection,
-    !mobileTablet,
+    mobileTablet,
     padding
   );
   if (isLangInView) {

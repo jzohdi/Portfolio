@@ -577,9 +577,14 @@ div.row[class^="row-margin-right"] {
     padding: calc(20px + 6vw) !important;
   }
 }
-@media (max-width: 1199px) {
+@media (max-width: 1199px) and (min-width: 768px) {
   .projects-block {
     padding: 20px calc(20px + 25vw) !important;
+  }
+}
+@media (max-width: 767px) {
+  .projects-block {
+    padding: 20px calc(20px + 2vw) !important;
   }
 }
 .projects-block:hover {
@@ -609,9 +614,15 @@ div.row[class^="row-margin-right"] {
     padding-top: 5%;
   }
 }
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .projects-block-desc {
-    padding-top: 5%;
+    padding-top: 8%;
+  }
+}
+@media (min-width: 690px) and (max-width: 1199px) {
+  .projects-block-desc {
+    padding-left: 10% !important;
+    padding-right: 10% !important;
   }
 }
 .project-title {
@@ -759,7 +770,7 @@ div.row[class^="row-margin-right"] {
   animation-name: fade-in-left;
 }
 .fourth-page-section {
-  padding-top: 25vh;
+  padding-top: 33vh;
   min-height: 100vh;
   background-color: white;
 }
@@ -837,4 +848,6 @@ div.row[class^="row-margin-right"] {
   text-align: center;
   box-shadow: 5px 10px 18px #292929;
   background-color: white;
+  margin-left: -10% !important;
+  width: 120%;
 }
