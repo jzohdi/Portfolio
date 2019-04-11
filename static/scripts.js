@@ -178,11 +178,7 @@ window.addEventListener("scroll", function() {
 
   // console.log("scrolling");
   const langSection = $("#languages-section");
-  const isLangInView = Utils.isElementInView(
-    langSection,
-    mobileTablet,
-    padding
-  );
+  const isLangInView = Utils.isElementInView(langSection, false, padding);
   if (isLangInView) {
     langSection.removeClass("my-hide").addClass("fade-in-right");
     [
