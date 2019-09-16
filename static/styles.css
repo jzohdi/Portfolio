@@ -604,7 +604,7 @@ div.row[class^="row-margin-right"] {
 .projects-block-desc {
   /* color: white; */
   color: black;
-  font-size: 12px;
+  font-size: calc(10px + 0.5vw);
   padding-top: 5%;
   padding-bottom: 5%;
   /* padding-right: 10% !important; */
@@ -626,6 +626,7 @@ div.row[class^="row-margin-right"] {
   }
 }
 .project-title {
+  font-size: calc(13px + 0.5vw);
   text-align: center;
   border-bottom: 2px solid;
   width: 100%;
