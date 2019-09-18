@@ -142,7 +142,7 @@ Utility.prototype = {
   isElementInView: function(element, fullyInView, padding = 0) {
     const pageTop = $(window).scrollTop();
     const pageBottom = pageTop + $(window).height();
-    const elementTop = $(element).offset().top;
+    const elementTop = element.offset().top;
     const elementBottom = elementTop + $(element).height();
 
     if (fullyInView === true) {
@@ -205,11 +205,11 @@ window.addEventListener("scroll", function() {
     aboutSection.removeClass("my-hide").addClass("fade-in-left");
   }
 
-  const educationSection = $("#education-section");
-  const isEducationInView = Utils.isElementInView(educationSection, true);
-  if (isEducationInView) {
-    educationSection.removeClass("my-hide").addClass("fade-in-left");
-  }
+  //   const educationSection = $("#education-section");
+  //   const isEducationInView = Utils.isElementInView(educationSection, true);
+  //   if (isEducationInView) {
+  //     educationSection.removeClass("my-hide").addClass("fade-in-left");
+  //   }
 });
 
 // const emailButton = $("#email-button");
