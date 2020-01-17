@@ -34,7 +34,7 @@
     <!-- local JQuery backup -->
     <script>
       window.jQuery ||
-        document.write('<script src="/static/jquery-3.3.1.min.js"><\/script>');
+        document.write('<script src="static/jquery-3.3.1.min.js"><\/script>');
     </script>
     <!-- Latest compiled and minified JavaScript bootstrap CDN -->
     <script
@@ -172,69 +172,11 @@
         </div>
           </div>
         </div>
-        <div class='third-page-section'>
+        <div id="projects-section" class='third-page-section'>
           <div class="projects-title">Projects</div>
-          <div class="row">
-            <div class="col-lg-6 projects-block"><a href="https://taco-lindo-catering.herokuapp.com/"><img class='portfolio-image' src="static/images/tacolindocatering.png" alt="Taco Lindo Catering"></a></div>
-            <div class="col-lg-6 projects-block-desc">
-              <p class='project-title'>Taco Lindo Catering</p>
-              <p>Responsive design to handle catering support for Taco Lindo, a New Jersey based restaraunt. Features include: Dynamic menu dependent on admin changes. Payment handling.
-                 Date validation and sorting. Recommendation of order size based on number of people. Link sharing. User changes to orders. Log in, registration, and guest checkout.   
-              </p>
-              <p>Uses: Python( Flask ), MongoDB, Javascript, Bootstrap, Jquery, Stripe.js, GoogleSheets API </p>
-              <!-- <p class='repo-div'><a href="https://github.com/jzohdi/TLindo-v2.0">--Repository--</a></p> -->
-              </div>
-            </div>
-          <div class="row">
-            <div class="projects-block-desc col-lg-6">
-              <p class='project-title'>Tweet Quotes</p>
-              <p>- Cycle through quotes on desgin through ajax get and connect to twitter with filled in input using Twitter API. Compiled JSON data of quotes and 
-                authors through webscraping in Python( BeautifulSoup4 ). - In progress: create own JSON API in Flask.</p>
-              <p>Uses: JSON data, BS4 (Python ) webscraping, Javascript, </p>
-              <p class='repo-div'><a href="https://github.com/jzohdi/Canvas-Quotes">--Repository--</a></p>
-            </div>
-            <div class="col-lg-6 projects-block"><a href="https://jzohdi.github.io/Canvas-Quotes/"><img class='portfolio-image' src="static/images/tweetquotes.png" alt="Tweet Quotes"></a></div>
+
           </div>
-          <div class="row">
-            <div class="col-lg-6 projects-block"><a href="https://j-zohdi.herokuapp.com/get_quotes"><img class='portfolio-image'src="static/images/quotesapi.png" alt="Quotes API"></a></div>
-            <div class="projects-block-desc col-lg-6"><p class='project-title'>Quotes API</p>
-              <p> - Web API for generatoring quotes. Endpoint include random, search source, search author, and random with size(list). Uses web scraper to increase database after each call to random. </p>
-                <p>Uses: Flask, MongoDB, BS4, Javascript </p>
-                <p class='repo-div'><a href="https://github.com/jzohdi/svmVisualizer/blob/master/app.py">--Repository--</a></p>
-                </div>
-          </div>
-          <div class="row">
-              <div class="col-lg-6 projects-block-desc"><p class='project-title'>Tunnel Game</p>
-                <p>Pure Canvas animation, use mouse or touch screen to keep player in the middle of the tunnel. 
-                  As a wall enters the screen from top, creates new wall just above. After leaving bottom, deletes self from array of wall objects.
-                  Keeps array size to the minimal length for game, keeping animation smooth.
-                </p>
-                <p>Uses: Javascript, JQuery, HTML5 Canvas</p>
-                <p class='repo-div'><a href="https://github.com/jzohdi/tunnel_game">--Repository--</a></p>
-                </div>
-            <div class="col-lg-6 projects-block"><a href="https://jzohdi.github.io/tunnel_game/"><img class='portfolio-image'src="static/images/tunnelgame.png" alt="Tunnel Game"></a></div>
-          </div>
-          <div class="row">
-            <div class="col-lg-6 projects-block"><a href="https://jzohdi.github.io/simple_graph/"><img class='portfolio-image'src="static/images/simplegraph.png" alt="Simple Graph"></a></div>
-            <div class="projects-block-desc col-lg-6"><p class='project-title'>Simple Graph</p>
-              <p> - Graph polynomial, trig, log and more with a simple graphing tool. Graph multiple functions on the same box. Uses url encoding for 
-                link sharing support. Detects x position of mouse and shows tangent line of point on each function, while displaying derivative and tanget 
-                line functions above.</p>
-                <p>Uses: Javascript, JQuery, HTML5 Canvas</p>
-                <p class='repo-div'><a href="https://github.com/jzohdi/simple_graph">--Repository--</a></p>
-                </div>
-          </div>                    
-            <div class="row">
-            <div class="col-lg-6 projects-block-desc">
-              <p class='project-title'>SVM Visualizer</p>
-              <p>Making svm kernels with visualizations quickly accessible. Input own user data in the form of 2D or 3D data to return prediction map of data space. Eventually compatable with larger dimension space with heat map distribution based on certainty of classification. </p>
-              <p>Uses: Python( Flask, sklearn ), Javascript, Plotly.js</p>
-              <p class='repo-div'><a href="https://github.com/jzohdi/svmVisualizer">--Repository--</a></p>
-              </div>
-              <div class="col-lg-6 projects-block"><a href="https://j-zohdi.herokuapp.com/svm_visualizer"><img src="static/images/svmvisualizer.png" alt="SVM Visualizer" class="portfolio-image"></a></div>
-            </div>
-          </div>
-          </div>
+        </div>
     
 
         </div>

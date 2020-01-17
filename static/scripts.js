@@ -243,3 +243,124 @@ const scrollTo = function(section) {
 const topFunction = function() {
   scrollTo("#main-body");
 };
+
+const projectsJson = {
+  "0": {
+    title: "Taco Lindo Catering",
+    link: "https://taco-lindo-catering.herokuapp.com/",
+    image: "tacolindocatering.png",
+    description: `Responsive design to handle catering support for Taco Lindo, a New Jersey based restaraunt. Features include: Dynamic menu dependent on admin changes. Payment handling.
+    Date validation and sorting. Recommendation of order size based on number of people. Link sharing. User changes to orders. Log in, registration, and guest checkout.`,
+    stack:
+      "Python( Flask ), MongoDB, Javascript, Bootstrap, Jquery, Stripe.js, GoogleSheets API",
+    repo: "https://github.com/jzohdi/TLindo-v2.0"
+  },
+  "1": {
+    title: "Tweet Quotes",
+    link: "https://jzohdi.github.io/Canvas-Quotes/",
+    image: "tweetquotes.png",
+    description: ` - Cycle through quotes on desgin through ajax get and connect to twitter with filled in input using Twitter API. Compiled JSON data of quotes and 
+    authors through webscraping in Python( BeautifulSoup4 ). - `,
+    stack: "JSON data, BS4 (Python ) webscraping, Javascript",
+    repo: "https://github.com/jzohdi/Canvas-Quotes"
+  },
+  "2": {
+    title: "Quotes API",
+    link: "https://j-zohdi.herokuapp.com/get_quotes",
+    image: "quotesapi.png",
+    description: ` - Web API for generatoring quotes. Endpoint include random, search source, search author, and random with size(list). Uses web scraper to increase database after each call to random. - `,
+    stack: "Flask, MongoDB, BS4, Javascript",
+    repo: "https://github.com/jzohdi/svmVisualizer/blob/master/app.py"
+  },
+  "3": {
+    title: "Tunnel Game",
+    link: "https://jzohdi.github.io/tunnel_game/",
+    image: "tunnelgame.png",
+    description: ` - Pure Canvas animation, use mouse or touch screen to keep player in the middle of the tunnel. 
+    As a wall enters the screen from top, creates new wall just above. After leaving bottom, deletes self from array of wall objects.
+    Keeps array size to the minimal length for game, keeping animation smooth. - `,
+    stack: "Javascript, JQuery, HTML5 Canvas",
+    repo: "https://github.com/jzohdi/tunnel_game"
+  },
+  "4": {
+    title: "Simple Graph",
+    link: "https://jzohdi.github.io/simple_graph/",
+    image: "simplegraph.png",
+    description: ` - Graph polynomial, trig, log and more with a simple graphing tool. Graph multiple functions on the same box. Uses url encoding for 
+    link sharing support. Detects x position of mouse and shows tangent line of point on each function, while displaying derivative and tanget 
+    line functions above. - `,
+    stack: "Javascript, JQuery, HTML5 Canvas",
+    repo: "https://github.com/jzohdi/simple_graph"
+  },
+  "5": {
+    title: "SVM Visualizer",
+    link: "https://j-zohdi.herokuapp.com/svm_visualizer",
+    image: "svmvisualizer.png",
+    description: ` - Making svm kernels with visualizations quickly accessible. Input own user data in the form of 2D or 3D data to return prediction map of data space. Eventually compatable with larger dimension space with heat map distribution based on certainty of classification. - `,
+    stack: "Python( Flask, sklearn ), Javascript, Plotly.js",
+    repo: "https://github.com/jzohdi/svmVisualizer"
+  },
+  "6": {
+    title: "Sudoku.C",
+    link: "https://github.com/jzohdi/sudoku-solver",
+    image: "sudoku_solver.png",
+    description: ` - A command line based sudoku solver. First attemps to solve with the constrain satisfaction algorithm AC-3, which uses the rules of Sudoku to fill in spaces where a single possible value is left given the other starting values. If incomplete, the rest will be completed with Back Tracking Search (BTS).`,
+    stack: "C (valgrind and gdb for debugging), Makefile",
+    repo: "https://github.com/jzohdi/sudoku-solver"
+  }
+};
+
+const getPorjectLeftHtml = json => {
+  let html = `<div class="row">`;
+  html += `<div class="col-lg-6 projects-block">
+            <a href="${json["link"]}">
+              <img class='portfolio-image' src="static/images/${json["image"]}" alt="${json["title"]}">
+            </a>
+          </div>`;
+  html += `<div class="col-lg-6 projects-block-desc">
+            <p class='project-title'>${json["title"]}</p>
+            <p>${json["description"]}</p>
+            <p>Uses: ${json["stack"]} </p>
+            <p class='repo-div'><a href="${json["repo"]}">--Repository--</a></p>
+          </div>`;
+  return html + "</div>";
+};
+
+const getPorjectRightHtml = json => {
+  let html = `<div class="row">`;
+  html += `<div class="col-lg-6 projects-block-desc">
+            <p class='project-title'>${json["title"]}</p>
+            <p>${json["description"]}</p>
+            <p>Uses: ${json["stack"]} </p>
+            <p class='repo-div'><a href="${json["repo"]}">--Repository--</a></p>
+          </div>`;
+  html += `<div class="col-lg-6 projects-block">
+            <a href="${json["link"]}">
+              <img class='portfolio-image' src="static/images/${json["image"]}" alt="${json["title"]}">
+            </a>
+          </div>`;
+  return html + "</div>";
+};
+/* insertProjects functions will allow to easier update html in future. */
+const insertProjects = (id, json, ids) => {
+  const section = $(id);
+
+  ids.forEach((key, index) => {
+    const element = json[key];
+    if (index % 2 == 0) {
+      section.append(getPorjectLeftHtml(element));
+    } else {
+      section.append(getPorjectRightHtml(element));
+    }
+  });
+};
+
+insertProjects("#projects-section", projectsJson, [
+  "0",
+  "6",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5"
+]);
