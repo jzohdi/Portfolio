@@ -358,9 +358,9 @@ const insertProjects = (id, json, ids) => {
 insertProjects("#projects-section", projectsJson, [
   "0",
   "6",
+  "5",
   "1",
   "2",
   "3",
-  "4",
-  "5"
+  "4"
 ]);
