@@ -386,8 +386,7 @@ $("#send-email").on("click", () => {
     subject: "Contact from portfolio",
     message: message
   };
-  // https://jz-email-server.herokuapp.com/api/send
-  fetch("http://127.0.0.1:5000/api/send", {
+  fetch("https://jz-email-server.herokuapp.com/api/send", {
     method: "POST", // or 'PUT'
     headers: {
       "Content-Type": "application/json"
