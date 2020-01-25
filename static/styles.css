@@ -609,6 +609,7 @@ div.row[class^="row-margin-right"] {
   padding-bottom: 5%;
   /* padding-right: 10% !important; */
 }
+
 @media (max-width: 767px) {
   .projects-block-desc {
     padding-top: 5%;
@@ -624,6 +625,9 @@ div.row[class^="row-margin-right"] {
     padding-left: 10% !important;
     padding-right: 10% !important;
   }
+  /* .projects-block-desc-left {
+
+  } */
 }
 .project-title {
   font-size: calc(13px + 0.5vw);
@@ -866,9 +870,6 @@ body {
   position: relative;
 }
 
-.row {
-  margin: -20px 0;
-}
 .row:after {
   content: "";
   display: table;
