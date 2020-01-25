@@ -96,6 +96,10 @@ const initCanvas = () => {
       this.y += this.dy;
       this.draw();
     };
+    this.reverseDirection = function() {
+      this.dy *= -1;
+      this.dx *= -1;
+    };
   }
   const particles = [];
 
@@ -107,6 +111,18 @@ const initCanvas = () => {
     let newParticle = new Particle(new_x, new_y, new_dx, new_dy);
     particles.push(newParticle);
   }
+
+  $("#map-canvas").on("click", () => {
+    particles.forEach(particle => {
+      particle.reverseDirection();
+    });
+  });
+
+  $(".hello-name").on("click", () => {
+    particles.forEach(particle => {
+      particle.reverseDirection();
+    });
+  });
 
   function animate() {
     requestAnimationFrame(animate);
@@ -373,19 +389,64 @@ $(".js-input").keyup(function() {
   }
 });
 
-$("#send-email").on("click", () => {
-  const name = $("#name").val();
-  const email = $("#email").val();
-  const message = $("#message").val();
+const returnContactForm = animateInfo => {
+  setTimeout(() => {
+    animateInfo.sendButton.removeClass("b-in").addClass("b-out2");
 
-  if (!name || !email || !message || !email.includes("@")) {
+    setTimeout(() => {
+      animateInfo.sendButton.html(animateInfo.buttonStartText);
+      animateInfo.sendButton.removeClass("b-out2");
+      animateInfo.formSection.removeClass("fade-out");
+    }, animateInfo.animateTime);
+  }, 3000 + animateInfo.animateTime);
+};
+
+const animateSendMail = sectionsToClear => {
+  const formSection = $("#to-fade");
+  const sendButton = $("#send-email");
+  const buttonStartText = sendButton.html();
+  const animateTime = 500; // milliseconds
+
+  formSection.addClass("fade-out");
+  sendButton.addClass("b-out");
+  sectionsToClear.forEach(ele => {
+    ele.val("");
+  });
+
+  setTimeout(() => {
+    sendButton.html("I look forward to talking.");
+    sendButton.removeClass("b-out").addClass("b-in");
+  }, animateTime);
+
+  return {
+    animateTime: animateTime,
+    sendButton: sendButton,
+    formSection: formSection,
+    buttonStartText: buttonStartText
+  };
+};
+
+$("#send-email").on("click", () => {
+  const name = $("#name");
+  const email = $("#email");
+  const message = $("#message");
+
+  if (
+    !name.val() ||
+    !email.val() ||
+    !message.val() ||
+    !email.val().includes("@")
+  ) {
     return false;
   }
   const data = {
-    recipient: email,
+    recipient: email.val(),
     subject: "Contact from portfolio",
-    message: message
+    message: `Name: ${name.val()}\n ${message.val()}`
   };
+
+  const animateInfo = animateSendMail([name, email, message]);
+
   fetch("https://jz-email-server.herokuapp.com/api/send", {
     method: "POST", // or 'PUT'
     headers: {
@@ -399,8 +460,12 @@ $("#send-email").on("click", () => {
         console.log("Success:", data);
       } else {
       }
+      returnContactForm(animateInfo);
     })
     .catch(error => {
       console.error("Error:", error);
+      animateInfo.sendButton.html(
+        "It looks like there was an error. Please email me, at jzohdi@terpmail.umd.edu"
+      );
     });
 });

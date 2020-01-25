@@ -182,8 +182,9 @@
         </div>
         <div class='container-fluid'>
           <div class="fourth-page-section">
-            <section class="get-in-touch">
+            <section id='get-in-touch' class="get-in-touch">
               <form class="contact-form row">
+                <div id="to-fade">
                  <div class="form-field col x-50">
                     <input id="name" class="input-text js-input" type="text" required>
                     <label class="label" for="name">Name</label>
@@ -196,9 +197,10 @@
                     <textarea id="message" class="input-text textarea-contact js-input" type="text"></textarea> 
                     <label id='message-label' class="label" for="message">Message</label>
                  </div>
-                 <div class="form-field col x-100 align-center">
-                  <button id="send-email" type="button" class="submit-btn">Let's get in touch</button>
-                 </div>
+                </div>
+                <div class="form-field col x-100 align-center">
+                  <button id="send-email" type="button" class="submit-btn email-button">Let's get in touch</button>
+                </div>
               </form>
            </section>
             <!-- <div class='col-sm-6 col-sm-offset-3' id='email-button'> 

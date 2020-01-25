@@ -981,3 +981,27 @@ body {
   text-align: center;
   padding: 40px;
 }
+
+#send-email,
+#to-fade {
+  transition: color 0.5s, background-color 0.5s, opacity 0.5s;
+}
+.b-out {
+  background-color: white !important;
+}
+.b-out2 {
+  background-color: white !important;
+  color: white !important;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.b-in {
+  font-size: 20px;
+  font-weight: bolder;
+  color: black !important;
+  background-color: white !important;
+}
+
+.fade-out {
+  opacity: 0;
+}
