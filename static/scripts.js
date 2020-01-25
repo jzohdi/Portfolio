@@ -213,10 +213,10 @@ window.addEventListener("scroll", function() {
 });
 
 // const emailButton = $("#email-button");
-const emailButton = document.getElementById("email-button");
-emailButton.addEventListener("click", function() {
-  window.open(String("mailto:jzohdi^terpmail.umd.edu").replace("^", "@"));
-});
+// const emailButton = document.getElementById("email-button");
+// emailButton.addEventListener("click", function() {
+//   window.open(String("mailto:jzohdi^terpmail.umd.edu").replace("^", "@"));
+// });
 
 const sections = [
   ".second-page-section",
@@ -364,3 +364,44 @@ insertProjects("#projects-section", projectsJson, [
   "3",
   "4"
 ]);
+
+$(".js-input").keyup(function() {
+  if ($(this).val()) {
+    $(this).addClass("not-empty");
+  } else {
+    $(this).removeClass("not-empty");
+  }
+});
+
+$("#send-email").on("click", () => {
+  const name = $("#name").val();
+  const email = $("#email").val();
+  const message = $("#message").val();
+
+  if (!name || !email || !message || !email.includes("@")) {
+    return false;
+  }
+  const data = {
+    recipient: email,
+    subject: "Contact from portfolio",
+    message: message
+  };
+  // https://jz-email-server.herokuapp.com/api/send
+  fetch("http://127.0.0.1:5000/api/send", {
+    method: "POST", // or 'PUT'
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+    .then(response => response.json())
+    .then(data => {
+      if (data.status == "Success") {
+        console.log("Success:", data);
+      } else {
+      }
+    })
+    .catch(error => {
+      console.error("Error:", error);
+    });
+});
