@@ -234,11 +234,7 @@ window.addEventListener("scroll", function() {
 //   window.open(String("mailto:jzohdi^terpmail.umd.edu").replace("^", "@"));
 // });
 
-const sections = [
-  ".second-page-section",
-  ".third-page-section",
-  ".fourth-page-section"
-];
+const sections = [".third-page-section", ".fourth-page-section"];
 const navButtons = ["nav-projects", "nav-contact"];
 navButtons.forEach(function(element, index) {
   document.getElementById(element).addEventListener("click", function() {
