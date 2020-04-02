@@ -577,6 +577,7 @@ div.row[class^="row-margin-right"] {
     padding: calc(20px + 6vw) !important;
   }
 }
+
 @media (max-width: 1199px) and (min-width: 768px) {
   .projects-block {
     padding: 20px calc(20px + 25vw) !important;
@@ -618,6 +619,11 @@ div.row[class^="row-margin-right"] {
 @media (min-width: 1200px) {
   .projects-block-desc {
     padding-top: 8%;
+  }
+}
+@media (max-width: 1199px) {
+  .projects-block-desc {
+    border-bottom: 2px solid black;
   }
 }
 @media (min-width: 690px) and (max-width: 1199px) {

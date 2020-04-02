@@ -193,33 +193,33 @@ window.addEventListener("scroll", function() {
   }
 
   // console.log("scrolling");
-  const langSection = $("#languages-section");
-  const isLangInView = Utils.isElementInView(langSection, false, padding);
-  if (isLangInView) {
-    langSection.removeClass("my-hide").addClass("fade-in-right");
-    [
-      "python-bar",
-      "javascript-bar",
-      "sql-bar",
-      "java-bar",
-      "c-bar",
-      "react-bar"
-    ].forEach(element => {
-      $("#" + element).addClass(element);
-    });
-    // $("#python-bar").addClass("python-bar");
-  }
+  // const langSection = $("#languages-section");
+  // const isLangInView = Utils.isElementInView(langSection, false, padding);
+  // if (isLangInView) {
+  //   langSection.removeClass("my-hide").addClass("fade-in-right");
+  //   [
+  //     "python-bar",
+  //     "javascript-bar",
+  //     "sql-bar",
+  //     "java-bar",
+  //     "c-bar",
+  //     "react-bar"
+  //   ].forEach(element => {
+  //     $("#" + element).addClass(element);
+  //   });
+  //   // $("#python-bar").addClass("python-bar");
+  // }
 
-  const aboutSection = $("#about-section");
-  const isAboutInView = Utils.isElementInView(
-    aboutSection,
-    !mobileTablet,
-    padding
-  );
-  if (isAboutInView) {
-    // console.log("in view");
-    aboutSection.removeClass("my-hide").addClass("fade-in-left");
-  }
+  // const aboutSection = $("#about-section");
+  // const isAboutInView = Utils.isElementInView(
+  //   aboutSection,
+  //   !mobileTablet,
+  //   padding
+  // );
+  // if (isAboutInView) {
+  //   // console.log("in view");
+  //   aboutSection.removeClass("my-hide").addClass("fade-in-left");
+  // }
 
   //   const educationSection = $("#education-section");
   //   const isEducationInView = Utils.isElementInView(educationSection, true);
@@ -239,7 +239,7 @@ const sections = [
   ".third-page-section",
   ".fourth-page-section"
 ];
-const navButtons = ["nav-about", "nav-projects", "nav-contact"];
+const navButtons = ["nav-projects", "nav-contact"];
 navButtons.forEach(function(element, index) {
   document.getElementById(element).addEventListener("click", function() {
     scrollTo(sections[index]);
@@ -363,11 +363,11 @@ const insertProjects = (id, json, ids) => {
 
   ids.forEach((key, index) => {
     const element = json[key];
-    if (index % 2 == 0) {
-      section.append(getPorjectLeftHtml(element));
-    } else {
-      section.append(getPorjectRightHtml(element));
-    }
+    // if (index % 2 == 0) {
+    section.append(getPorjectLeftHtml(element));
+    // } else {
+    // section.append(getPorjectRightHtml(element));
+    // }
   });
 };
 
